@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet" type="text/css"/>
+    <link href="bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker3.css" rel="stylesheet" type="text/css"/>
+    <link href="css/landing.css" rel="stylesheet" type="text/css"/>
+    <title>Product Detail</title>
+</head>
+<body>
+
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"><h3 class="text-muted">Your Flower</h3></a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">Account</a></li>
+                    <li><a href="#">Cart</a></li>
+                </ul>
+                <form class="navbar-form navbar-right" role="search">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- The justified navigation menu is meant for single line per list item.
+         Multiple lines will require custom code not provided by Bootstrap. -->
+    <div class="masthead ">
+        <nav>
+            <ul class="nav nav-justified">
+                <li class="active"><a href="#">Birthday</a></li>
+                <li class="active">
+                    <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true" id="dropdownMenu1"  href="#">Occasion</a>
+
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">AA</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">BB</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">CC</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">DD</a></li>
+                    </ul>
+
+                </li>
+                <li><a href="#">Flowers</a></li>
+                <li><a href="#">Gourmet</a></li>
+                <li><a href="#">Specials</a></li>
+                <li><a href="#">Same Day</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="container product-detail-container">
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class=" product-detail">
+                    <img src="./image/product_detail.jpg" alt="detail image" class="img-responsive"/>
+                    <div class="detail-long-desc text-muted" >
+                        <p>
+                            Pink Pop Birthday Azalea
+                            Pink Pop Birthday Azalea
+                            Pink Pop Birthday Azalea
+                            Pink Pop Birthday Azalea
+                            Pink Pop Birthday Azalea
+                            Pink Pop Birthday Azalea
+                            Pink Pop Birthday Azalea
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="short-desc text-muted" >
+                    <h3>
+                        Pink Pop Birthday Azalea
+                    </h3>
+                </div>
+                <div class="price text-muted" >
+                    <p>
+                        <strong>$49.99</strong>
+                    </p>
+                </div>
+                <div class="button-grou">
+
+                    <button class="datepicker btn btn-default btn-lg btn-block">Pick a delivery date</button>
+                    <h4 id="delivery-date"></h4>
+
+
+                </div>
+            </div>
+
+        </div>
+
+    </div> <!-- /container -->
+
+    <!-- Site footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="text-center">
+                <a class="static-footer-link" href="#">Privacy Policy</a>
+                |
+
+                <a class="static-footer-link" href="#">Terms of Use</a>
+                |
+                <a class="static-footer-link" href="#">Feedback</a>
+            </p>
+            <h4 class="text-center">
+                <small>
+                    Certain products not eligible for offers or discounts (including clearance items), and such designation will appear on the product detail page. Limit one offer or discount per order. Offers and discounts will appear at last checkout screen and cannot be combined with other offers or discounts. Offers and discounts do not apply to gift cards or certificates, international or same-day delivery, shipping, care and handling, personalization fees, taxes, third-party hosted products (e.g. wine). Unless otherwise specified, Free Vase offers, if any, are valid for Glass Ginger Vase. Free Shipping offers, if any, are valid for standard delivery.
+                </small>
+            </h4>
+
+            <h4 class="text-center">
+                <small>
+                    ProFlowers received the highest numerical score in the proprietary J.D. Power 2015 Online Flower Retailer Satisfaction Report(sm). Report based on 2,000 responses measuring 4 online flower retailers and measures the opinions of consumers who made an online purchase in the past 12 months. Proprietary study results are based on experiences and perceptions of consumers surveyed February 2015. Your experiences may vary. Visit jdpower.com
+                    ©2015 Provide Commerce, Inc. All rights reserved.
+                </small>
+            </h4>
+
+
+        </div>
+    </footer>
+
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.js"></script>
+
+    <script>
+        jQuery(document).ready(
+                function () {
+                    console.log("aaa");
+                    $('.datepicker').datepicker({
+                        format: 'yyyy-mm-dd'
+                    });
+
+                    $(".datepicker").on("changeDate", function(event) {
+                        console.log("no longer");
+                        $("#delivery-date").text(
+                                $(".datepicker").datepicker('getFormattedDate')
+                        );
+                    });
+                }
+        );
+    </script>
+
+</body>
+</html>

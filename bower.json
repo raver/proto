@@ -1,0 +1,26 @@
+{
+  "name": "MyTest",
+  "version": "1.0",
+  "authors": [
+    "Jude <yutao008@gmail.com>"
+  ],
+  "description": "No",
+  "main": "Main.html",
+  "moduleType": [
+    "node"
+  ],
+  "keywords": [
+    "somekeywords"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.4"
+  }
+}
